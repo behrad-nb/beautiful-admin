@@ -1,0 +1,130 @@
+/* Beautiful Admin — look only. Never changes position/order of menus or buttons. */
+
+/* ---------- Colors ---------- */
+body.ba-color-white{--bg:#eef1f7;--g1:rgba(79,124,255,.16);--g2:rgba(255,160,120,.14);--card:rgba(255,255,255,.72);--solid:#fff;--field:#fff;--text:#1d2433;--muted:#667085;--border:rgba(20,30,60,.11);--accent:#1f2937;--accent-fg:#fff;--menu:rgba(255,255,255,.8);--menu-solid:#fff;--hover:rgba(20,30,60,.06);--stripe:rgba(20,30,60,.03);--scheme:light}
+body.ba-color-cream{--bg:#f4ecd8;--g1:rgba(214,160,90,.28);--g2:rgba(255,255,255,.55);--card:rgba(255,251,240,.78);--solid:#fffaf0;--field:#fffdf6;--text:#3a2f1e;--muted:#857357;--border:rgba(90,65,20,.15);--accent:#a8672a;--accent-fg:#fff;--menu:rgba(255,250,236,.82);--menu-solid:#fffaf0;--hover:rgba(120,80,20,.08);--stripe:rgba(120,80,20,.04);--scheme:light}
+body.ba-color-black{--bg:#0b0b0e;--g1:rgba(255,255,255,.07);--g2:rgba(120,120,150,.14);--solid:#16161b;--accent:#f3f4f6;--accent-fg:#0b0b0e;--menu:rgba(0,0,0,.45);--menu-solid:#101014}
+body.ba-color-blue{--bg:#071230;--g1:rgba(60,130,255,.38);--g2:rgba(20,200,255,.2);--solid:#0e1f4a;--accent:#5b9bff;--accent-fg:#04102a;--menu:rgba(3,10,35,.55);--menu-solid:#081638}
+body.ba-color-red{--bg:#1a0709;--g1:rgba(255,80,80,.38);--g2:rgba(255,160,90,.24);--solid:#2a0d12;--accent:#ff6b7d;--accent-fg:#2a0509;--menu:rgba(30,3,6,.55);--menu-solid:#220a0e}
+body.ba-color-green{--bg:#05150e;--g1:rgba(40,210,140,.32);--g2:rgba(180,255,120,.15);--solid:#0b2a1c;--accent:#34d399;--accent-fg:#03150d;--menu:rgba(2,18,10,.55);--menu-solid:#082015}
+/* shared dark values */
+body.ba-color-black,body.ba-color-blue,body.ba-color-red,body.ba-color-green{--card:rgba(255,255,255,.07);--field:rgba(255,255,255,.08);--text:#f1f2f7;--muted:rgba(241,242,247,.62);--border:rgba(255,255,255,.13);--hover:rgba(255,255,255,.09);--stripe:rgba(255,255,255,.035);--scheme:dark}
+
+/* ---------- Styles ---------- */
+body.ba-style-glass{--r:16px;--blur:blur(18px) saturate(140%);--bgi:radial-gradient(900px 520px at 90% -5%,var(--g1),transparent 60%),radial-gradient(800px 560px at -5% 105%,var(--g2),transparent 60%);--surf:var(--card);--sh:0 10px 30px rgba(0,0,0,.16);--bd:1px}
+body.ba-style-solid{--r:12px;--blur:none;--bgi:none;--surf:var(--solid);--sh:0 4px 14px rgba(0,0,0,.10);--bd:1px}
+body.ba-style-minimal{--r:4px;--blur:none;--bgi:none;--surf:var(--solid);--sh:none;--bd:1px}
+body.ba-style-aurora{--r:24px;--blur:blur(22px) saturate(160%);--bgi:radial-gradient(700px 500px at 15% 8%,var(--g1),transparent 60%),radial-gradient(800px 600px at 88% 40%,var(--g2),transparent 60%),radial-gradient(700px 500px at 40% 105%,var(--g1),transparent 60%);--surf:var(--card);--sh:0 18px 50px rgba(0,0,0,.2);--bd:1px}
+
+/* ---------- Base ---------- */
+html.wp-toolbar{background:transparent!important}
+body[class*="ba-style-"]{background-color:var(--bg)!important;background-image:var(--bgi)!important;background-attachment:fixed!important;color:var(--text);color-scheme:var(--scheme);font-family:Vazirmatn,"Segoe UI",Tahoma,system-ui,-apple-system,Roboto,"Noto Sans Arabic","Noto Sans",sans-serif}
+body[class*="ba-style-"] #wpwrap,body[class*="ba-style-"] #wpcontent,body[class*="ba-style-"] #wpbody,body[class*="ba-style-"] #wpbody-content{background:transparent}
+body[class*="ba-style-"] #wpbody-content,body[class*="ba-style-"] .wrap,body[class*="ba-style-"] p,body[class*="ba-style-"] label,body[class*="ba-style-"] .form-table th,body[class*="ba-style-"] .form-table td,body[class*="ba-style-"] h1,body[class*="ba-style-"] h2,body[class*="ba-style-"] h3{color:var(--text)}
+body[class*="ba-style-"] .description,body[class*="ba-style-"] .howto,body[class*="ba-style-"] #wpfooter,body[class*="ba-style-"] .displaying-num,body[class*="ba-style-"] .row-actions{color:var(--muted)}
+body[class*="ba-style-"] #wpbody-content a:not(.button):not(.page-title-action):not(.nav-tab){color:var(--accent);transition:opacity .15s}
+body[class*="ba-style-"] #wpbody-content a:not(.button):hover{opacity:.8}
+body.ba-color-white #wpbody-content a:not(.button):not(.page-title-action):not(.nav-tab){color:#2f5de0}
+body.ba-color-cream #wpbody-content a:not(.button):not(.page-title-action):not(.nav-tab){color:#9a5a1f}
+body[class*="ba-style-"] *::-webkit-scrollbar{width:10px;height:10px}
+body[class*="ba-style-"] *::-webkit-scrollbar-thumb{background:var(--border);border-radius:10px}
+
+/* ---------- Top bar ---------- */
+body[class*="ba-style-"] #wpadminbar{background:var(--menu)!important;-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur);border-bottom:1px solid var(--border);color:var(--text)}
+body[class*="ba-style-"] #wpadminbar .ab-item,body[class*="ba-style-"] #wpadminbar a.ab-item,body[class*="ba-style-"] #wpadminbar>#wp-toolbar span.ab-label,body[class*="ba-style-"] #wpadminbar .ab-icon:before,body[class*="ba-style-"] #wpadminbar #adminbarsearch:before{color:var(--text)!important}
+body[class*="ba-style-"] #wpadminbar .menupop .ab-sub-wrapper{background:var(--menu-solid)!important;border:1px solid var(--border);border-radius:0 0 var(--r) var(--r);box-shadow:var(--sh)}
+body[class*="ba-style-"] #wpadminbar .ab-top-menu>li:hover>.ab-item,body[class*="ba-style-"] #wpadminbar .ab-top-menu>li.hover>.ab-item,body[class*="ba-style-"] #wpadminbar:not(.mobile) .ab-top-menu>li:hover>.ab-item,body[class*="ba-style-"] #wpadminbar .quicklinks .menupop ul li a:hover{background:var(--hover)!important;color:var(--accent)!important}
+
+/* ---------- Side menu (colors only, positions untouched) ---------- */
+body[class*="ba-style-"] #adminmenuback,body[class*="ba-style-"] #adminmenuwrap,body[class*="ba-style-"] #adminmenu{background:var(--menu)!important}
+body[class*="ba-style-"] #adminmenuback{-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur);border-inline-end:1px solid var(--border)}
+body[class*="ba-style-"] #adminmenu a,body[class*="ba-style-"] #adminmenu div.wp-menu-image:before,body[class*="ba-style-"] #collapse-button,body[class*="ba-style-"] #adminmenu .wp-menu-arrow{color:var(--text)!important;transition:background .15s,color .15s}
+body[class*="ba-style-"] #adminmenu li.menu-top:hover,body[class*="ba-style-"] #adminmenu li.opensub>a.menu-top,body[class*="ba-style-"] #adminmenu li>a.menu-top:focus{background:var(--hover)!important;color:var(--text)!important}
+body[class*="ba-style-"] #adminmenu li.current a.menu-top,body[class*="ba-style-"] #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu,body[class*="ba-style-"] #adminmenu li.wp-has-current-submenu .wp-menu-image:before,body[class*="ba-style-"] #adminmenu li.current .wp-menu-image:before,body[class*="ba-style-"] #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu .wp-menu-name{background:var(--accent)!important;color:var(--accent-fg)!important}
+body[class*="ba-style-"] #adminmenu li.wp-has-current-submenu .wp-menu-image:before,body[class*="ba-style-"] #adminmenu li.current .wp-menu-image:before{background:transparent!important}
+body[class*="ba-style-"] #adminmenu .wp-submenu{background:var(--hover)!important}
+body[class*="ba-style-"] #adminmenu .wp-submenu a{color:var(--muted)!important}
+body[class*="ba-style-"] #adminmenu .wp-submenu a:hover,body[class*="ba-style-"] #adminmenu .wp-submenu li.current a{color:var(--accent)!important;background:transparent!important}
+body.ba-color-white #adminmenu .wp-submenu li.current a,body.ba-color-white #adminmenu .wp-submenu a:hover{color:#000!important}
+body[class*="ba-style-"].folded #adminmenu .wp-has-current-submenu .wp-submenu,body[class*="ba-style-"] #adminmenu .wp-not-current-submenu .wp-submenu{background:var(--menu-solid)!important;border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--sh)}
+body[class*="ba-style-"] #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu,body[class*="ba-style-"] #adminmenu li.current a.menu-top{border-radius:calc(var(--r)/2)}
+body[class*="ba-style-"] #adminmenu .awaiting-mod,body[class*="ba-style-"] #adminmenu .update-plugins{background:var(--accent);color:var(--accent-fg)}
+
+/* ---------- Cards / boxes ---------- */
+body[class*="ba-style-"] .postbox,body[class*="ba-style-"] .card,body[class*="ba-style-"] .stuffbox,body[class*="ba-style-"] .welcome-panel,body[class*="ba-style-"] .plugin-card,body[class*="ba-style-"] .notice,body[class*="ba-style-"] div.updated,body[class*="ba-style-"] div.error,body[class*="ba-style-"] table.widefat,body[class*="ba-style-"] .wp-list-table,body[class*="ba-style-"] .theme-browser .theme,body[class*="ba-style-"] .wp-core-ui .attachment-preview,body[class*="ba-style-"] .tablenav .tablenav-pages .pagination-links a,body[class*="ba-style-"] #dashboard-widgets .postbox{background:var(--surf)!important;color:var(--text);border:var(--bd) solid var(--border)!important;border-radius:var(--r);box-shadow:var(--sh)!important;-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur)}
+body[class*="ba-style-"] .postbox .postbox-header,body[class*="ba-style-"] .postbox .hndle,body[class*="ba-style-"] .postbox-header{background:transparent!important;border-color:var(--border)!important;color:var(--text)}
+body[class*="ba-style-"] .postbox-header{border-top-left-radius:var(--r);border-top-right-radius:var(--r)}
+body[class*="ba-style-"] .notice{border-inline-start:4px solid var(--accent)!important}
+body[class*="ba-style-"] .welcome-panel{background-image:none!important}
+body[class*="ba-style-"] .welcome-panel *{color:var(--text)}
+body[class*="ba-style-"] .plugin-card-bottom{background:var(--hover);border-color:var(--border);border-radius:0 0 var(--r) var(--r)}
+
+/* ---------- Tables ---------- */
+body[class*="ba-style-"] .widefat td,body[class*="ba-style-"] .widefat th{color:var(--text);border-color:var(--border)!important}
+body[class*="ba-style-"] .widefat thead th,body[class*="ba-style-"] .widefat tfoot th{background:var(--hover)}
+body[class*="ba-style-"] .widefat.striped>tbody>:nth-child(odd),body[class*="ba-style-"] ul.striped>:nth-child(odd){background:var(--stripe)}
+body[class*="ba-style-"] .wp-list-table tbody tr:hover{background:var(--hover)}
+body[class*="ba-style-"] .wp-list-table .check-column{padding-inline:8px}
+body[class*="ba-style-"] .subsubsub a,body[class*="ba-style-"] .subsubsub li{color:var(--muted)}
+body[class*="ba-style-"] .subsubsub a.current{color:var(--text);font-weight:700}
+body[class*="ba-style-"] .nav-tab-wrapper,body[class*="ba-style-"] .wrap h2.nav-tab-wrapper{border-color:var(--border)}
+body[class*="ba-style-"] .nav-tab{background:var(--hover);border-color:var(--border);color:var(--muted);border-radius:var(--r) var(--r) 0 0}
+body[class*="ba-style-"] .nav-tab-active,body[class*="ba-style-"] .nav-tab-active:hover{background:var(--accent)!important;color:var(--accent-fg)!important;border-color:var(--accent)!important}
+
+/* ---------- Buttons & fields ---------- */
+body[class*="ba-style-"] .button,body[class*="ba-style-"] .wp-core-ui .button,body[class*="ba-style-"] .page-title-action{background:var(--field);color:var(--text);border:1px solid var(--border);border-radius:calc(var(--r)/1.6);box-shadow:none;transition:transform .12s,background .15s,box-shadow .15s}
+body[class*="ba-style-"] .button:hover,body[class*="ba-style-"] .page-title-action:hover{background:var(--hover);color:var(--text);border-color:var(--accent)}
+body[class*="ba-style-"] .button:active{transform:scale(.98)}
+body[class*="ba-style-"] .button-primary,body[class*="ba-style-"] .wp-core-ui .button-primary{background:var(--accent)!important;color:var(--accent-fg)!important;border-color:var(--accent)!important;font-weight:600}
+body[class*="ba-style-"] .button-primary:hover{filter:brightness(1.08);box-shadow:0 6px 18px var(--g1)}
+body.ba-style-aurora .button,body.ba-style-aurora .page-title-action{border-radius:999px}
+body[class*="ba-style-"] input[type=text],body[class*="ba-style-"] input[type=search],body[class*="ba-style-"] input[type=email],body[class*="ba-style-"] input[type=url],body[class*="ba-style-"] input[type=password],body[class*="ba-style-"] input[type=number],body[class*="ba-style-"] input[type=date],body[class*="ba-style-"] textarea,body[class*="ba-style-"] select{background:var(--field);color:var(--text);border:1px solid var(--border);border-radius:calc(var(--r)/1.8);box-shadow:none}
+body[class*="ba-style-"] input:focus,body[class*="ba-style-"] textarea:focus,body[class*="ba-style-"] select:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--g1);outline:none}
+body[class*="ba-style-"] input[type=checkbox],body[class*="ba-style-"] input[type=radio]{background:var(--field);border-color:var(--border)}
+body[class*="ba-style-"] input[type=checkbox]:checked::before{filter:none}
+body[class*="ba-style-"] .tablenav .tablenav-pages .pagination-links a{padding:0 6px;color:var(--text)}
+body[class*="ba-style-"] #screen-meta,body[class*="ba-style-"] #screen-meta-links .screen-meta-toggle .button{background:var(--surf);border-color:var(--border);color:var(--text)}
+body[class*="ba-style-"] .wp-core-ui .button-link{color:var(--accent)}
+
+/* =============== Plugin setup page =============== */
+.ba-app{max-width:980px;margin:24px auto;padding:8px}
+.ba-head h1{font-size:30px;margin:0 0 6px;font-weight:800}
+.ba-head p{margin:0 0 20px;font-size:14px;color:var(--muted)!important}
+.ba-saved{background:var(--accent);color:var(--accent-fg);padding:10px 16px;border-radius:var(--r);margin-bottom:16px;font-weight:600}
+.ba-dots{display:flex;gap:10px;list-style:none;margin:0 0 22px;padding:0;flex-wrap:wrap}
+.ba-dots li{display:flex;align-items:center;gap:8px;opacity:.5;font-size:13px}
+.ba-dots li span{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--border);background:var(--field);font-weight:700}
+.ba-dots li em{font-style:normal}
+.ba-dots li.on,.ba-dots li.ok{opacity:1}
+.ba-dots li.on span,.ba-dots li.ok span{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+.ba-step{background:var(--surf);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--sh);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur);padding:22px;margin-bottom:18px}
+.ba-step[hidden]{display:none}
+.ba-step h2{margin:0 0 4px;font-size:20px}
+.ba-hint{margin:0 0 16px;color:var(--muted)!important}
+.ba-cards{display:grid;gap:14px}
+.ba-cards-4{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.ba-cards-6{grid-template-columns:repeat(auto-fit,minmax(120px,1fr))}
+.ba-card{position:relative;display:block;cursor:pointer}
+.ba-card input{position:absolute;opacity:0;pointer-events:none}
+.ba-card-in{display:flex;flex-direction:column;gap:6px;height:100%;box-sizing:border-box;padding:14px;border:2px solid var(--border);border-radius:var(--r);background:var(--field);transition:border-color .15s,transform .15s,box-shadow .15s}
+.ba-card:hover .ba-card-in{transform:translateY(-2px)}
+.ba-card input:checked+.ba-card-in{border-color:var(--accent);box-shadow:0 0 0 3px var(--g1)}
+.ba-card input:focus-visible+.ba-card-in{outline:2px solid var(--accent);outline-offset:2px}
+.ba-card small{color:var(--muted);line-height:1.5}
+.ba-center{align-items:center;justify-content:center;text-align:center}
+.ba-big{font-size:18px}
+.ba-sw{width:44px;height:44px;border-radius:50%;border:1px solid var(--border);box-shadow:0 4px 12px rgba(0,0,0,.2)}
+.ba-mini{display:flex;gap:6px;height:56px;border-radius:10px;padding:8px;border:1px solid var(--border);background:var(--bg)}
+.ba-mini i{flex:1;border-radius:6px;display:block}
+.ba-mini-glass{background:linear-gradient(135deg,var(--g1),var(--g2)),var(--bg)}
+.ba-mini-glass i{background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.3)}
+.ba-mini-solid i{background:var(--solid);box-shadow:0 3px 8px rgba(0,0,0,.25)}
+.ba-mini-minimal i{border:1px solid var(--border);border-radius:2px}
+.ba-mini-aurora{background:radial-gradient(circle at 20% 30%,var(--g1),transparent 60%),radial-gradient(circle at 80% 70%,var(--g2),transparent 60%),var(--bg)}
+.ba-mini-aurora i{background:rgba(255,255,255,.16);border-radius:14px}
+.ba-check{display:flex;gap:12px;align-items:flex-start;padding:14px;border:1px solid var(--border);border-radius:var(--r);background:var(--field);cursor:pointer}
+.ba-check small{color:var(--muted)}
+.ba-nav{display:flex;gap:10px;justify-content:flex-end}
+.ba-nav [hidden]{display:none}
+[dir=rtl].ba-app .ba-nav{justify-content:flex-start}
+[dir=rtl].ba-app{text-align:right}
