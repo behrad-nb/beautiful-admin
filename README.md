@@ -6,6 +6,14 @@
   پنل مدیریت وردپرس را زیبا و آرام کنید؛ بدون جابه‌جا کردن حتی یک منو یا دکمه.
 </p>
 
+
+
+
+<img width="1914" height="954" alt="Image" src="https://github.com/user-attachments/assets/8f81f163-fc82-48e4-91a9-4ea686224103" />
+<img width="1920" height="959" alt="Image" src="https://github.com/user-attachments/assets/fe0759bb-755a-497b-9341-459fbda212de" />
+<img width="1920" height="961" alt="Image" src="https://github.com/user-attachments/assets/f95173b1-766e-407a-a2d8-5e5fafd3ba2e" />
+<img width="1920" height="955" alt="Image" src="https://github.com/user-attachments/assets/a7d51354-f2b9-43b5-b33e-52f01293f054" />
+
 ---
 
 ## English
